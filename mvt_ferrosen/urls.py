@@ -19,5 +19,5 @@ from AppFlia.views import flia_db
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('flia_db', flia_db), 
+    path('flia_db/', flia_db), 
 ]  

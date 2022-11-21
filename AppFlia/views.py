@@ -4,13 +4,15 @@ from AppFlia.models import Familia
 from django.template import loader
 
 def flia_db(request):
-    mimujer = Familia(nombre = "Ale Regla", fecha_nacim = 1981-12-16, dni = 28888888)
-    mihija = Familia(nombre = "Lara Rosenman", fecha_nacim = 2016-9-2, dni = 55888888)
-    mihermana = Familia(nombre = "Maria Sol Rosenman", fecha_nacim = 1983-3-20, dni = 31111111)
+    mimujer = Familia(nombre = "Ale Regla", fecha_nacim ="1980-12-16", dni = 28888888)
+    mihija = Familia(nombre = "Lara Rosenman", fecha_nacim = "2016-09-02", dni = 55888888)
+    mihermana = Familia(nombre = "Maria Sol Rosenman", fecha_nacim = "1983-03-20", dni = 31111111)
 
     mimujer.save()
     mihija.save()
     mihermana.save()
+
+    
 
     dic = {
         "nombre_mimujer": mimujer.nombre,
@@ -23,7 +25,9 @@ def flia_db(request):
         "fechanacim_mihermana": mihermana.fecha_nacim,
         "dni_mihermana": mihermana.dni
         }
-    plantilla = loader.get_template("template_1.html")
+    
+    
+    plantilla = loader.get_template("template1.html")
     doc = plantilla.render(dic)
 
     return HttpResponse(doc)

@@ -6,5 +6,4 @@ class Familia(models.Model):
     fecha_nacim = models.DateField()
     dni = models.IntegerField()
 
-    def __str__(self):
-        return self.nombre_completo
+    
