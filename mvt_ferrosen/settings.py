@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mvt_ferrosen.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template/'],
+        'DIRS': ['template/'], #Ruta de la carpeta template
         ''
         'APP_DIRS': True,
         'OPTIONS': {
