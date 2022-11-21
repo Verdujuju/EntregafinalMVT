@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppFlia.views import flia_db
+from AppFlia.views import flia_db #Importo la bd
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

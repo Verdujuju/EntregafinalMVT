@@ -29,10 +29,11 @@ def flia_db(request): #Datos que completan la BD (de la clase Familia)
         }
     #Diccionario del cual se van a sacar los datos para el HTML (Voy a usar la clave siempre)
     
-    plantilla = loader.get_template("template1.html") #Llamo al template
+    plantilla = loader.get_template("template1.html") #Llamo al template (Ojo con el nombre)
     doc = plantilla.render(dic)
 
-    return HttpResponse(doc)
+    return HttpResponse(doc) #Documento que va a devolver
+    
 
 
 
